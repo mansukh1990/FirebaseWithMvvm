@@ -1,17 +1,22 @@
 package com.example.firebasewithmvvm.note
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.firebasewithmvvm.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import com.example.firebasewithmvvm.data.viewmodel.NoteViewModel
 import com.example.firebasewithmvvm.databinding.FragmentNoteListingragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class NoteListingFragment : Fragment() {
 
     val TAG : String = "NoteListingFragment"
     private lateinit var binding: FragmentNoteListingragmentBinding
+    private val viewModel by viewModels<NoteViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,6 +28,15 @@ class NoteListingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.getNotes()
+        viewModel.note.observe(viewLifecycleOwner) {
+            it.forEach{
+                Log.e(TAG, it.toString())
+            }
+
+
+        }
 
     }
 }
