@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1067244856648",
+    "project_id": "fir-withmvvm-d67f5",
+    "storage_bucket": "fir-withmvvm-d67f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067244856648:android:1d6bbcb23e9db829993f7d",
+        "android_client_info": {
+          "package_name": "com.example.firebasewithmvvm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI_MDRaFA6g_OQkeYqc8mY1ahb3tuyS5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
