@@ -4,9 +4,11 @@ import com.google.firebase.firestore.ServerTimestamp
 import java.util.Date
 
 data class Note(
-    val id : String,
-    val text : String,
+    var id: String = "",
+    val text: String = "",
     @ServerTimestamp
-    val date : Date,
+    val date: Date = Date(),
 
-)
+    ) {
+    constructor() : this("", "", date = Date())
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle">
+        <item name="android:fontFamily">@font/titillium_web_bold</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="TitleStyle">
+        <item name="android:fontFamily">@font/titillium_web_bold</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+</resources>
